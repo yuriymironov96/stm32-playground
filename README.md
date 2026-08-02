@@ -7,3 +7,4 @@ A bunch of learning projects using STM32F411 Black Pill developemt board.
 ## Mini-projects
 
 - [Non-blocking led blinks powered by buttons](https://github.com/yuriymironov96/stm32-playground/tree/feat/led-btn-pattern);
+- [Voltage divider with LDR, ADC voltage measurement with serial debugger on PC](https://github.com/yuriymironov96/stm32-playground/tree/feat/ldr-experiment);
