@@ -6,7 +6,7 @@ A bunch of learning projects using STM32F411 Black Pill developemt board.
 
 ## STM32 ADC converter experiment
 
-- Voltage divider circuit that uses voltage divider;
+- Voltage divider circuit that uses light dependent resistor;
 - A2 STM pin set in analog read mode;
 - USB-powered debugger to display messages on developer's machine;
 
