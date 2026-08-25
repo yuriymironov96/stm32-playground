@@ -10,3 +10,4 @@ A bunch of learning projects using STM32F411 Black Pill developemt board.
 - [Voltage divider with LDR, ADC voltage measurement with serial debugger on PC](https://github.com/yuriymironov96/stm32-playground/tree/feat/ldr-experiment);
 - [PWM-driven motor with varying speed](https://github.com/yuriymironov96/stm32-playground/tree/feat/pwm-transistor-motor);
 - [LED blinks driven by timers and interrupts](https://github.com/yuriymironov96/stm32-playground/tree/feat/led-timer);
+- [Different implemnetations of debounces - state machine, GPIO ISR + timer ISR etc](https://github.com/yuriymironov96/stm32-playground/tree/feat/debounce-techniques);
