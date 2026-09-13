@@ -11,3 +11,4 @@ A bunch of learning projects using STM32F411 Black Pill developemt board.
 - [PWM-driven motor with varying speed](https://github.com/yuriymironov96/stm32-playground/tree/feat/pwm-transistor-motor);
 - [LED blinks driven by timers and interrupts](https://github.com/yuriymironov96/stm32-playground/tree/feat/led-timer);
 - [Different implemnetations of debounces - state machine, GPIO ISR + timer ISR etc](https://github.com/yuriymironov96/stm32-playground/tree/feat/debounce-techniques);
+- [Buzzer control using transistors and PWM - non-blocking audio player and user-controlled synthesizer](https://github.com/yuriymironov96/stm32-playground/tree/feat/lesson-33-module-3.4-buzzer);
