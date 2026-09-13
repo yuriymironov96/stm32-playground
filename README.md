@@ -36,4 +36,13 @@ In idle mode, buzzer plays a Nokia tune. On button presses, user is able to play
 
 
 
+https://github.com/user-attachments/assets/3c51a99f-24ad-4575-ad57-bbe0308a96f4
+
+
+
 ### Demo 2: Smoke on the water riff
+
+
+
+https://github.com/user-attachments/assets/346795fd-a09f-4ae2-bf93-765d1a0ee9b0
+
