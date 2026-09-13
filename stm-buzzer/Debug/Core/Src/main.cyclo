@@ -1,0 +1,15 @@
+../Core/Src/main.c:142:13:SineTable_Init	2
+../Core/Src/main.c:153:13:Tone_SetFrequency	1
+../Core/Src/main.c:159:13:Tone_Stop	1
+../Core/Src/main.c:166:13:NokiaPlayer_StartCurrentNote	1
+../Core/Src/main.c:182:13:NokiaPlayer_Start	1
+../Core/Src/main.c:187:13:NokiaPlayer_Update	5
+../Core/Src/main.c:228:5:main	2
+../Core/Src/main.c:287:6:SystemClock_Config	3
+../Core/Src/main.c:330:13:MX_TIM2_Init	6
+../Core/Src/main.c:385:13:MX_TIM3_Init	4
+../Core/Src/main.c:427:13:MX_USB_OTG_FS_PCD_Init	2
+../Core/Src/main.c:460:13:MX_GPIO_Init	1
+../Core/Src/main.c:496:6:HAL_GPIO_EXTI_Callback	9
+../Core/Src/main.c:513:6:HAL_TIM_PeriodElapsedCallback	3
+../Core/Src/main.c:532:6:Error_Handler	1
