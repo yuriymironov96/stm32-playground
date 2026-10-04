@@ -4,12 +4,14 @@ A bunch of learning projects using STM32F411 Black Pill developemt board.
 
 - [Pinout](https://deepbluembedded.com/wp-content/uploads/2024/03/STM32F411CE-Black-Pill-Board-Pinout-Diagram.png);
 
-## Mini-projects
+## Lesson 40: UART
 
-- [Non-blocking led blinks powered by buttons](https://github.com/yuriymironov96/stm32-playground/tree/feat/led-btn-pattern);
-- [Voltage divider with LDR, ADC voltage measurement with serial debugger on PC](https://github.com/yuriymironov96/stm32-playground/tree/feat/ldr-experiment);
-- [PWM-driven motor with varying speed](https://github.com/yuriymironov96/stm32-playground/tree/feat/pwm-transistor-motor);
-- [LED blinks driven by timers and interrupts](https://github.com/yuriymironov96/stm32-playground/tree/feat/led-timer);
-- [Different implemnetations of debounces - state machine, GPIO ISR + timer ISR etc](https://github.com/yuriymironov96/stm32-playground/tree/feat/debounce-techniques);
-- [Buzzer control using transistors and PWM - non-blocking audio player and user-controlled synthesizer](https://github.com/yuriymironov96/stm32-playground/tree/feat/lesson-33-module-3.4-buzzer);
-- [Two separate parallel hardware PWMs controlled by different ADCs](https://github.com/yuriymironov96/stm32-playground/tree/feat/lesson-32-module-3.3-hardware-pwm);
+Connect ESP32 and STM32 together. Each MCU has its own button, LED and UART connection. ESP button press triggers STM led and vice versa. To communicate LED state, ASCII '1' and '0' are used. UART is configured to have 9-bit messages with 1 parity bit.
+
+### Pinout
+
+![fritzing.png](fritzing.png)
+
+### Demo
+
+![demo.gif](demo.gif)
