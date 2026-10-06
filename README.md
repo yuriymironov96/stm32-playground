@@ -4,13 +4,18 @@ A bunch of learning projects using STM32F411 Black Pill developemt board.
 
 - [Pinout](https://deepbluembedded.com/wp-content/uploads/2024/03/STM32F411CE-Black-Pill-Board-Pinout-Diagram.png);
 
-## Mini-projects
+## I2C communicaion
 
-- [Non-blocking led blinks powered by buttons](https://github.com/yuriymironov96/stm32-playground/tree/feat/led-btn-pattern);
-- [Voltage divider with LDR, ADC voltage measurement with serial debugger on PC](https://github.com/yuriymironov96/stm32-playground/tree/feat/ldr-experiment);
-- [PWM-driven motor with varying speed](https://github.com/yuriymironov96/stm32-playground/tree/feat/pwm-transistor-motor);
-- [LED blinks driven by timers and interrupts](https://github.com/yuriymironov96/stm32-playground/tree/feat/led-timer);
-- [Different implemnetations of debounces - state machine, GPIO ISR + timer ISR etc](https://github.com/yuriymironov96/stm32-playground/tree/feat/debounce-techniques);
-- [Buzzer control using transistors and PWM - non-blocking audio player and user-controlled synthesizer](https://github.com/yuriymironov96/stm32-playground/tree/feat/lesson-33-module-3.4-buzzer);
-- [Two separate parallel hardware PWMs controlled by different ADCs](https://github.com/yuriymironov96/stm32-playground/tree/feat/lesson-32-module-3.3-hardware-pwm);
-- [UART Communication with another MCU](https://github.com/yuriymironov96/stm32-playground/tree/feat/lesson-40-41-uart);
+- Cloned [existing project](https://github.com/Vel11leV/STM32F401CC_I2C_display_ssd1306) with STM32, I2C and drivers for SSD1306 display;
+- Wired up DS1307 RTC into the same I2C bus as SSD1306;
+- Used STM32 to continuously read RTC values and write them onto OLED;
+- Wrote a tiny driver `ds1307.c` for the RTC;
+
+
+## Demo
+
+![demo.gif](demo.gif)
+
+## Fritzing
+
+![circuit.png](circuit.png)
