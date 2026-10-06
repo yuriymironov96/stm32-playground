@@ -1,0 +1,2 @@
+../Core/Src/ds1307.c:7:16:BCD_ToDecimal	1
+../Core/Src/ds1307.c:12:19:DS1307_ReadTime	4

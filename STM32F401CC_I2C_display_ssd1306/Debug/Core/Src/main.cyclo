@@ -1,0 +1,7 @@
+../Core/Src/main.c:67:9:digital120_serial_send	2
+../Core/Src/main.c:84:5:main	2
+../Core/Src/main.c:145:6:SystemClock_Config	3
+../Core/Src/main.c:189:13:MX_I2C1_Init	2
+../Core/Src/main.c:223:13:MX_SPI1_Init	2
+../Core/Src/main.c:260:13:MX_GPIO_Init	1
+../Core/Src/main.c:278:6:Error_Handler	1
