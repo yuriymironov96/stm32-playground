@@ -15,4 +15,4 @@ A bunch of learning projects using STM32F411 Black Pill developemt board.
 - [Two separate parallel hardware PWMs controlled by different ADCs](https://github.com/yuriymironov96/stm32-playground/tree/feat/lesson-32-module-3.3-hardware-pwm);
 - [UART Communication with another MCU](https://github.com/yuriymironov96/stm32-playground/tree/feat/lesson-40-41-uart);
 - [Read RTC data through I2C, write time to OLED display](https://github.com/yuriymironov96/stm32-playground/tree/feat/lesson-41-42-i2c);
-- [SPI sensor, I2C sensor+OLED output](https://github.com/yuriymironov96/stm32-playground/tree/feat/lesson-44-45-spi)
+- [SPI sensor, I2C sensor+OLED output](https://github.com/yuriymironov96/stm32-playground/tree/feat/lesson-44-45-spi);
