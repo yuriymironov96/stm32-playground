@@ -61,7 +61,7 @@
 #include "bme280.h"
 #include <stdio.h>
 #include <string.h>
-#define SPI2_CS1_Pin GPIO_PIN_13
+#define BME280_CS_Pin GPIO_PIN_13
 extern SPI_HandleTypeDef hspi1;
 extern I2C_HandleTypeDef hi2c1;
 extern uint8_t logData[200];
@@ -348,9 +348,9 @@ s8 SPI_routine(void) {
  *  use SPI mode. It will not respond to I2C commands until you
  *  reset the power to it.
  */
-	HAL_GPIO_WritePin(GPIOB, SPI2_CS1_Pin, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(GPIOB, BME280_CS_Pin, GPIO_PIN_RESET);
 	HAL_Delay(10);
-	HAL_GPIO_WritePin(GPIOB, SPI2_CS1_Pin, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(GPIOB, BME280_CS_Pin, GPIO_PIN_SET);
 
 	return BME280_INIT_VALUE;
 }
@@ -442,6 +442,10 @@ s8 BME280_I2C_bus_read(u8 dev_addr, u8 reg_addr, u8 *reg_data, u8 cnt)
  */
 s8 BME280_SPI_bus_read(u8 dev_addr, u8 reg_addr, u8 *reg_data, u8 cnt)
 {
+    (void)dev_addr; /* SPI selects the device with CS, not an I2C address. */
+    if (reg_data == NULL || cnt == 0 || cnt >= SPI_BUFFER_LEN) {
+        return -1;
+    }
 	HAL_StatusTypeDef status = HAL_OK;
 	s32 iError=BME280_INIT_VALUE;
 	u8 txarray[SPI_BUFFER_LEN]={0,};
@@ -452,11 +456,9 @@ s8 BME280_SPI_bus_read(u8 dev_addr, u8 reg_addr, u8 *reg_data, u8 cnt)
 	read/write (read as 1/write as BME280_INIT_VALUE)*/
 	txarray[BME280_INIT_VALUE] = reg_addr|SPI_READ;/*read routine is initiated register address is mask with 0x80*/
 
-	HAL_GPIO_WritePin( GPIOB, SPI2_CS1_Pin, GPIO_PIN_RESET );
+	HAL_GPIO_WritePin( GPIOB, BME280_CS_Pin, GPIO_PIN_RESET );
 	status = HAL_SPI_TransmitReceive( &hspi1, (uint8_t *)(&txarray), (uint8_t *)(&rxarray), cnt+1, 5);
-	while( hspi1.State == HAL_SPI_STATE_BUSY ) {};
-	HAL_GPIO_WritePin( GPIOB, SPI2_CS1_Pin, GPIO_PIN_SET );
-	HAL_Delay(5); // since i can't find a buffer flushing command
+	HAL_GPIO_WritePin( GPIOB, BME280_CS_Pin, GPIO_PIN_SET );
 	for (stringpos = BME280_INIT_VALUE; stringpos < cnt; stringpos++) {
 		*(reg_data + stringpos) = rxarray[stringpos+BME280_DATA_INDEX];
 	}
@@ -479,6 +481,10 @@ s8 BME280_SPI_bus_read(u8 dev_addr, u8 reg_addr, u8 *reg_data, u8 cnt)
  */
 s8 BME280_SPI_bus_write(u8 dev_addr, u8 reg_addr, u8 *reg_data, u8 cnt)
 {
+    (void)dev_addr;
+    if (reg_data == NULL || cnt == 0 || cnt > SPI_BUFFER_LEN) {
+        return -1;
+    }
 	HAL_StatusTypeDef status = HAL_OK;
 	s32 iError = BME280_INIT_VALUE;
 	u8 array[SPI_BUFFER_LEN * BME280_ADDRESS_INDEX];
@@ -493,10 +499,9 @@ s8 BME280_SPI_bus_write(u8 dev_addr, u8 reg_addr, u8 *reg_data, u8 cnt)
 		array[index + BME280_DATA_INDEX] = *(reg_data + stringpos);
 	}
 
-	HAL_GPIO_WritePin( GPIOB, SPI2_CS1_Pin, GPIO_PIN_RESET );
+	HAL_GPIO_WritePin( GPIOB, BME280_CS_Pin, GPIO_PIN_RESET );
 	status = HAL_SPI_Transmit( &hspi1, (uint8_t*)(&array), cnt*2, 100);
-	while( hspi1.State == HAL_SPI_STATE_BUSY ) {};
-	HAL_GPIO_WritePin( GPIOB, SPI2_CS1_Pin, GPIO_PIN_SET );
+	HAL_GPIO_WritePin( GPIOB, BME280_CS_Pin, GPIO_PIN_SET );
 
     if (status != HAL_OK)
     {
@@ -512,6 +517,6 @@ s8 BME280_SPI_bus_write(u8 dev_addr, u8 reg_addr, u8 *reg_data, u8 cnt)
 void BME280_delay_msek(u32 msek)
 {
 	/*Here you can write your own delay routine*/
-	HAL_Delay(10*msek);
+	HAL_Delay(msek); /* Only used during initialization by the application. */
 }
 #endif

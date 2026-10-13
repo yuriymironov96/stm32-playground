@@ -14,5 +14,6 @@ typedef struct {
  * The output is updated only on success.
  */
 HAL_StatusTypeDef DS1307_ReadTime(I2C_HandleTypeDef *hi2c, DS1307_Time *time);
+HAL_StatusTypeDef DS1307_SetTime(I2C_HandleTypeDef *hi2c, DS1307_Time *time);
 
 #endif
