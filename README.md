@@ -16,3 +16,4 @@ A bunch of learning projects using STM32F411 Black Pill developemt board.
 - [UART Communication with another MCU](https://github.com/yuriymironov96/stm32-playground/tree/feat/lesson-40-41-uart);
 - [Read RTC data through I2C, write time to OLED display](https://github.com/yuriymironov96/stm32-playground/tree/feat/lesson-41-42-i2c);
 - [SPI sensor, I2C sensor+OLED output](https://github.com/yuriymironov96/stm32-playground/tree/feat/lesson-44-45-spi);
+- [Read ADC values using DMA](https://github.com/yuriymironov96/stm32-playground/tree/feat/lesson-45-module-4.6-dma);
