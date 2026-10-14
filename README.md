@@ -1,8 +1,8 @@
 # stm32-playground
 
-A bunch of learning projects using STM32F411 Black Pill developemt board.
+A bunch of learning projects using STM32F401CCUx Black Pill developemt board.
 
-- [Pinout](https://deepbluembedded.com/wp-content/uploads/2024/03/STM32F411CE-Black-Pill-Board-Pinout-Diagram.png);
+- [Pinout](https://mischianti.org/wp-content/uploads/2022/02/STM32-STM32F4-STM32F401-STM32F401CCU6-pinout-low-resolution.jpg);
 
 ## Mini-projects
 
