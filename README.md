@@ -6,6 +6,6 @@ A bunch of learning projects using STM32F401CCUx Black Pill developemt board.
 
 ## Lesson 46: blink without HAL
 
-![alt text](image.png)
+![code.png](code.png)
 
 A small experiment on how we can toggle pin state without HAL. What I did is, I have just inspected the `HAL_GPIO_TogglePin` implementation and re-implemented it inside main superloop, toggling LED state using bit manipulation.
