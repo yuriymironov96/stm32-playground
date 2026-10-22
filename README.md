@@ -17,3 +17,4 @@ A bunch of learning projects using STM32F401CCUx Black Pill developemt board.
 - [Read RTC data through I2C, write time to OLED display](https://github.com/yuriymironov96/stm32-playground/tree/feat/lesson-41-42-i2c);
 - [SPI sensor, I2C sensor+OLED output](https://github.com/yuriymironov96/stm32-playground/tree/feat/lesson-44-45-spi);
 - [Read ADC values using DMA](https://github.com/yuriymironov96/stm32-playground/tree/feat/lesson-45-module-4.6-dma);
+- [LED blink without HAL, using direct bit manipulation](https://github.com/yuriymironov96/stm32-playground/tree/feat/lesson-47-no-hal);
